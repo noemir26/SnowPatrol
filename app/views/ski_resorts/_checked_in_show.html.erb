@@ -16,7 +16,9 @@
       </div>
     </div>
     <div class='d-flex justify-content-center'>
-      <%= render 'check_out_btn' %>
+      <div class="check-out-btn">
+        <%= link_to "Check out", check_in_path(current_user.active_check_in), data: {turbo_method: :patch}, style: "color: white; text-decoration: none" %>
+      </div>
     </div>
   </div>
 </div>

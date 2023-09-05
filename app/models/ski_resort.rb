@@ -11,25 +11,20 @@ class SkiResort < ApplicationRecord
 
   validates :name, presence: true
   validates :location, presence: true
-  validates :description, presence: true
-  validates :average_rating, presence: true, inclusion: { in: 0..5 }
-  validates :url, presence: true
   validates :latitude, presence: true, numericality: { greater_than_or_equal_to: -90.0, less_than_or_equal_to: 90.0 }
   validates :longitude, presence: true, numericality: { greater_than_or_equal_to: -180.0, less_than_or_equal_to: 180.0 }
 
   include PgSearch::Model
   pg_search_scope :search_by_name_and_location,
   against: [ :name, :location],
-  using: {
-    tsearch: { prefix: true } # <-- now `superman batm` will return something!
-         }
+  using: { tsearch: { prefix: true }}
 
   def average_rating
     return 0 if reviews.nil? || reviews.empty?
 
     sum = 0
     reviews.each do |review|
-      review_avg = (review.lift_wait_rating +
+      review_avg =( review.lift_wait_rating +
                     review.price_rating +
                     review.crowd_rating +
                     review.food_rating +
@@ -43,33 +38,21 @@ class SkiResort < ApplicationRecord
     return 0 if reviews.nil? || reviews.empty?
 
     sum = 0
-    case rating_type
-    when "lift_wait_rating"
-      reviews.each do |review|
+    reviews.each do |review|
+      case rating_type
+      when "lift_wait_rating"
         sum += review.lift_wait_rating
-      end
-      sum / reviews.length
-    when "price_rating"
-      reviews.each do |review|
+      when "price_rating"
         sum += review.price_rating
-      end
-      sum / reviews.length
-    when "crowd_rating"
-      reviews.each do |review|
+      when "crowd_rating"
         sum += review.crowd_rating
-      end
-      sum / reviews.length
-    when "food_rating"
-      reviews.each do |review|
+      when "food_rating"
         sum += review.food_rating
-      end
-      sum / reviews.length
-    when "location_rating"
-      reviews.each do |review|
+      when "location_rating"
         sum += review.location_rating
       end
-      sum / reviews.length
     end
+    sum / reviews.length
   end
 
   def current_condition
