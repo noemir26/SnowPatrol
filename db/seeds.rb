@@ -15,7 +15,6 @@ puts 'Detroying all previous ski reports...'
 SkiResort.destroy_all
 
 CSV.foreach(ski_resorts, headers: :first_row, header_converters: :symbol) do |row|
-  puts 'creating ski resort'
   ski_resort = SkiResort.create!(
     {
       name: row[:resort_name],
@@ -52,7 +51,6 @@ CSV.foreach(ski_resorts, headers: :first_row, header_converters: :symbol) do |ro
   }
   photo_response = Net::HTTP.post(photo_uri, photo_body.to_json, photo_headers)
   parsed_photos = JSON.parse(photo_response.body)
-  p parsed_photos[0]
   parsed_photo = parsed_photos[0]
   if parsed_photo
 
@@ -76,7 +74,7 @@ user_no = 0
 
 # creating 10 users, each of them has been to 5 resorts, left 1 review and 1 snow report
 # none of them have a default resort assigned
-100.times do
+10.times do
   user = User.create!(
     {
       email: Faker::Internet.email,
@@ -124,5 +122,4 @@ check_in_default.user = User.first
 check_in_default.ski_resort = SkiResort.all.sample
 check_in_default.save!
 
-puts SkiResort.first.inspect
 puts 'Done! :)'
