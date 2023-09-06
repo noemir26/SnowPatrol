@@ -19,13 +19,20 @@
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
 
-  h1 {
+  .title, .slogan {
+    width: 100vw;
+    margin: 0 auto;
     font-family: $home-font;
-    font-size: 40pt;
   }
 
-  h5 {
-    font-family: $home-font;
+  .title {
+    font-size: 40pt;
+    margin-top: 150px;
+  }
+
+  .slogan {
+    margin-top: 10px;
+    margin-bottom: 30px;
   }
 }
 
@@ -45,27 +52,6 @@
   to {
     background-position: right; /* Ending position */
   }
-}
-
-.center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  margin: auto;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(75, 75, 250, 0.3);
-  border-radius: 3px;
-}
-
-.center h1 {
-  text-align:center;
-  color:white;
-  font-family: 'Source Code Pro', monospace;
-  text-transform:uppercase;
 }
 
 .checkin-background {
