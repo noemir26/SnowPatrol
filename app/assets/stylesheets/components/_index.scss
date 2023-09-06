@@ -1,0 +1,27 @@
+// Import your components CSS files here.
+@import "alert";
+@import "avatar";
+@import "form_legend_clear";
+@import "navbar";
+@import "map";
+@import "form_review";
+@import "snow_report";
+@import "chart_bg_color";
+
+
+.index-container {
+  height: calc(100vh - 48px);
+  overflow: hidden;
+}
+
+.map-container, .mapboxgl-map {
+  width: calc(100vw + 10px) !important;
+
+  .mapboxgl-canvas{
+    width: 100% !important;
+  }
+}
+
+.wider{
+  width: calc(100vw + 10px) !important;
+}

@@ -1,0 +1,71 @@
+// This is where you override default Bootstrap variables
+// 1. Find all Bootstrap variables that you can override at the end of each component's documentation under the `Sass variables` anchor
+// e.g. here are the ones you can override for the navbar https://getbootstrap.com/docs/5.2/components/navbar/#sass-variables
+// 2. These variables are defined with default value (see https://robots.thoughtbot.com/sass-default)
+// 3. You can override them below!
+
+// General style
+$font-family-sans-serif: $body-font;
+$headings-font-family:   $headers-font;
+$body-bg:                $white-blue;
+$font-size-base:         1rem;
+
+// Colors
+$body-color: $gray;
+$primary:    $dark-blue;
+$secondary:  $baby-blue;
+$success:    $green;
+$info:       $pink;
+$danger:     $red;
+$warning:    $light-orange;
+$light:      $white-blue;
+
+// Buttons & inputs' radius
+$border-radius:    2px;
+$border-radius-lg: 2px;
+$border-radius-sm: 2px;
+
+// Override other variables below!
+// custom colors for snow-patrol
+$white-blue: #F4F9FE;
+$light-blue: #C4D2E7;
+$blue-grey: #778DB9;
+$dark-blue: #073763;
+$light-orange: #E8B6AD;
+$green: #4DC567;
+$gray: #434343;
+$light-gray: #F4F4F4;
+$baby-blue: #B2FEF0;
+$red: #FF0000;
+$salmon-pink: #FFCAD3;
+$pink: #FF8298;
+
+$nosnow: rgba(116, 50, 13, 0.5);
+$slush: rgba(245, 30, 30, 0.5);
+$icy: rgba(255, 153, 0, 0.5);
+$groomed: rgba(236, 240, 27, 0.5);
+$packed: rgba(157, 242, 47, 0.5);
+$pow:  rgba(29, 182, 44, 0.5);
+
+
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":    $blue-grey,
+  "nosnow": $nosnow,
+  "slush": $slush,
+  "icy": $icy,
+  "groomed": $groomed,
+  "packed": $packed,
+  "pow": $pow
+  );
+
+  $form-range-thumb-bg: $pink;
+  $form-range-track-bg: $dark-blue;
+  $form-range-thumb-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;

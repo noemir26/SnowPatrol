@@ -1,0 +1,73 @@
+.available-features{
+  ul{
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    margin-left: 30px;
+  }
+}
+
+.ski-resort-info{
+  height: 100vh;
+
+  .snow-report{
+    border-radius: 10px;
+  }
+
+  .bby-blue-btn{
+    font-weight: bolder;
+    font-size: larger;
+    border-radius: 10px;
+  }
+
+  background-image: url('https://images.pexels.com/photos/15835820/pexels-photo-15835820/free-photo-of-snowy-mountain-in-birds-eye-view.jpeg');
+
+  .background-color-style {
+    background-color: rgba($color: $dark-blue, $alpha: 0.25);
+    height: inherit;
+  }
+  // background-position: center;
+
+  #scroll-container {
+    // border: 3px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+  }
+
+  #scroll-text {
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    -moz-animation: my-animation 13s linear infinite;
+    -webkit-animation: my-animation 13s linear infinite;
+    animation: my-animation 13s linear infinite;
+  }
+
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+  }
+}

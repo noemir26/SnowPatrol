@@ -1,0 +1,27 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap";
+@import "font-awesome";
+// @import "@mapbox/mapbox-gl-geocoder";
+
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+// Customize
+@import "components/resort_card";
+@import "components/info_ski_resort_show";
+@import "components/search_bar";
+@import "components/reviews_grid";
+@import "components/check_in_bg_color";
+@import "components/review_btn";
+@import "components/snow_report_btn";
+@import "components/check_out_button";
+@import "components/snow_guide_button";
+@import "components/friends_list";
+

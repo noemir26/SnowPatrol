@@ -1,0 +1,32 @@
+<!-- Modal -->
+<div class="modal fade" id="snowBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="snowBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="snowBackdropLabel">What's the snow like?</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <%= simple_form_for [ski_resort, snow_report] do |f| %>
+        <div class="modal-body">
+          <div class="snow-rate">
+            <%= f.input :rating,
+            as: :radio_buttons,
+            collection_wrapper_tag: 'div',
+            collection_wrapper_class: 'category-wrapper',
+            item_wrapper_class: "category-item no_snow",
+            item_wrapper_tab: "span",
+            label_method: :humanize,
+            legend_tag: false,
+            input_html: {class: 'category-selector'},
+            collection: SnowReport::CATEGORIES %>
+            <div class="modal-footer">
+              <%= f.submit 'Submit Snow Report' %>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          <% end %>
+          <%= render 'snow_guide_modal' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
