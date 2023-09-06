@@ -9,7 +9,7 @@
         <%= render "ski_resorts/specific_info", ski_resort: @ski_resort %>
       </div>
       <div id='scroll-container' class='mt-1 bg-opacity-25 <%= render 'background_style', ski_resort: @ski_resort %>'>
-        <div id='scroll-text'>
+        <div class='scroll-text'>
           <p class='p-0 m-0'><strong><%= @ski_resort.snow_reports.count%></strong> people say the snow is:
             <%= render "shared/current_cond_icon", ski_resort: @ski_resort, current_snow: false %>
           </p>
@@ -25,9 +25,7 @@
       <div class='mx-2 text-center bg-light bg-opacity-75 rounded-5'>
         <%= render 'friends_list' %>
       </div>
-      <div class='pt-2 m-2'>
-        <%= render "ski_resorts/check_in_btn" %>
-      </div>
+      <%= render "ski_resorts/check_in_btn" %>
     </div>
   </div>
 <% end %>
