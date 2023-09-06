@@ -1,0 +1,36 @@
+<% case ski_resort.current_condition %>
+<% when'no_snow' %>
+  <div class="<%= current_snow ? 'current-snow ' : '' %>nosnow">
+    <%= image_tag "clear.svg", alt: "No snow", class: "svg-icon-small" %>
+    <span class="condition-text">NO SNOW!</span>
+  </div>
+<% when'slushy' %>
+  <div class="<%= current_snow ? 'current-snow ' : '' %>slushy">
+    <%= image_tag "slush.svg", alt: "Slushy", class: "svg-icon-small", width: 50, height: 50 %>
+    <span class="condition-text">SLUSHY!</span>
+  </div>
+<% when'icy' %>
+  <div class="<%= current_snow ? 'current-snow ' : '' %>icy">
+    <%= image_tag "icy.svg", alt: "Icy", class: "svg-icon-small", width: 50, height: 50 %>
+    <span class="condition-text">ICY!</span>
+  </div>
+<% when'groomed_snow' %>
+  <div class="<%= current_snow ? 'current-snow ' : '' %>groomed">
+    <%= image_tag "groomed.svg", alt: "Groomed", class: "svg-icon-small", width: 50, height: 50 %>
+    <span class="condition-text">GROOMED!</span>
+  </div>
+<% when'packed_powder' %>
+  <div class="<%= current_snow ? 'current-snow ' : '' %>packed">
+    <%= image_tag "packed.svg", alt: "Packed Powder", class: "svg-icon-small", width: 50, height: 50 %>
+    <span class="condition-text">PACKED!</span>
+  </div>
+<% when'pow' %>
+  <div class="<%= current_snow ? 'current-snow ' : '' %>pow">
+    <%= image_tag "powder.svg", alt: "Powder", class: "svg-icon-small", width: 50, height: 50 %>
+    <span class="condition-text">POW!</span>
+  </div>
+<% else %>
+  <div class="<%= current_snow ? 'current-snow ' : '' %>no-report">
+    No reports yet today!
+  </div>
+<% end %>
