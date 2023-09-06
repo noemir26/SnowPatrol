@@ -1,0 +1,81 @@
+// check out btn
+.check-out-btn {
+  background-color: #778CB8;
+  padding: 13px;
+  width: 200px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px !important;
+
+}
+
+// snow guide button
+.table-bordered {
+  table-layout: fixed;
+}
+
+.table-bordered td {
+  width: calc(100% / 3); /* Distribute equally among 3 columns */
+}
+
+.nosnow{
+  border-radius: 12px;
+  padding: 5%;
+}
+.slush{
+  border-radius: 12px;
+  padding: 5px;
+}
+
+.icy{
+  border-radius: 12px;
+  padding: 10px;
+
+}
+.groomed{
+  border-radius: 12px;
+  padding: 10px;
+
+}
+.packed{
+  border-radius: 12px;
+  padding: 10px;
+
+}
+.pow{
+  border-radius: 12px;
+  padding: 10px;
+}
+
+// snow report button
+.snow-report-btn {
+  background-color: #2D5C9E;
+  padding: 13px;
+  width: 175px;
+  border-radius: 10px;
+  text-align: center;
+  height: 228px;
+
+  .btn {
+    color: white !important;
+    font-size: 20px !important;
+
+  }
+}
+
+// review button
+.review-btn {
+  background-color: #2D5C9E;
+  padding: 13px;
+  width: 175px;
+  border-radius: 10px;
+  text-align: center;
+  height: 228px;
+  border-color: black 2px;
+
+  .btn {
+    color: white !important;
+    font-size: 20px !important;
+
+  }
+}

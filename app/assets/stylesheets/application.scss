@@ -6,22 +6,23 @@
 // External libraries
 @import "bootstrap";
 @import "font-awesome";
-// @import "@mapbox/mapbox-gl-geocoder";
-
 
 // Your CSS partials
-@import "components/index";
+@import "pages/home";
 @import "pages/index";
 
 // Customize
-@import "components/resort_card";
-@import "components/info_ski_resort_show";
-@import "components/search_bar";
-@import "components/reviews_grid";
+@import "components/alert";
+@import "components/avatar";
+@import "components/buttons";
 @import "components/check_in_bg_color";
-@import "components/review_btn";
-@import "components/snow_report_btn";
-@import "components/check_out_button";
-@import "components/snow_guide_button";
+@import "components/form_legend_clear";
+@import "components/form_review";
 @import "components/friends_list";
-
+@import "components/index";
+@import "components/info_ski_resort_show";
+@import "components/map";
+@import "components/navbar";
+@import "components/resort_card";
+@import "components/reviews_grid";
+@import "components/snow_report";
